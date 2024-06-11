@@ -6,11 +6,11 @@ const RestorauntInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Food",
     icon,
-    photos = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/800px-Good_Food_Display_-_NCI_Visuals_Online.jpg",
-
+    photos,
     adress = "Nikole Tesle 14",
     isOpenNow = false,
     rating = 4,
+    vicinity,
     isClosedTemporarily = false,
   } = restaurant;
   return (
@@ -18,7 +18,7 @@ const RestorauntInfoCard = ({ restaurant = {} }) => {
       key={name}
       name={name}
       photos={photos}
-      adress={adress}
+      adress={vicinity}
       rating={rating}
       isOpenNow={isOpenNow}
     />

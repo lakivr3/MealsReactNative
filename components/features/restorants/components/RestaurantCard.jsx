@@ -26,7 +26,7 @@ export default function RestaurantCard({
           key={name}
           className="bg-white px-4"
           resizeMode="stretch"
-          source={{ uri: photos }}
+          source={{ uri: photos[0] }}
         />
         <Card.Content className="pt-6 ">
           <Text className="font-lato">{name}</Text>
