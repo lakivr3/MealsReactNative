@@ -4,7 +4,7 @@ import { locationRequest, locationTransform } from "./service";
 
 export const LocationContext = createContext();
 
-export const LcoationContextProvider = ({ children }) => {
+export const LocationContextProvider = ({ children }) => {
   const [location, setLocation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);

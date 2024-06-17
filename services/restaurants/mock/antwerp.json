@@ -33,7 +33,7 @@
           "width": 0
         }
       ],
-      "place_id": "some place id 1",
+      "place_id": "1",
       "rating": 4,
       "reference": "",
       "user_ratings_total": 832,
@@ -66,10 +66,10 @@
           "width": 2048
         }
       ],
-      "place_id": "some place id 2",
+      "place_id": "2",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "reference": "",
       "scope": "",
@@ -116,10 +116,10 @@
           "width": 3000
         }
       ],
-      "place_id": "some place id 3",
+      "place_id": "3",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "rating": 4.3,
       "reference": "",
@@ -166,7 +166,7 @@
           "width": 0
         }
       ],
-      "place_id": "some place id 4",
+      "place_id": "4",
       "rating": 4.6,
       "reference": "",
       "user_ratings_total": 152,
@@ -203,7 +203,7 @@
           "width": 0
         }
       ],
-      "place_id": "some place id 5",
+      "place_id": "5",
       "rating": 4.2,
       "reference": "",
 
@@ -241,7 +241,7 @@
           "width": 0
         }
       ],
-      "place_id": "some place id 6",
+      "place_id": "6",
       "price_level": 2,
       "rating": 4.3,
       "reference": "",
@@ -279,7 +279,7 @@
           "width": 0
         }
       ],
-      "place_id": "some place id 7",
+      "place_id": "7",
       "rating": 4.2,
       "reference": "",
       "user_ratings_total": 122,
@@ -316,7 +316,7 @@
           "width": 0
         }
       ],
-      "place_id": "some place id 8",
+      "place_id": "8",
       "price_level": 2,
       "rating": 4.4,
       "reference": "",
@@ -354,7 +354,7 @@
           "width": 0
         }
       ],
-      "place_id": "some place id 9",
+      "place_id": "9",
       "price_level": 2,
       "rating": 3.8,
       "reference": "",
@@ -392,10 +392,10 @@
           "width": 2048
         }
       ],
-      "place_id": "some place id 10",
+      "place_id": "10",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.7,
@@ -436,10 +436,10 @@
           "width": 6153
         }
       ],
-      "place_id": "some place id 11",
+      "place_id": "11",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.2,
@@ -486,10 +486,10 @@
           "width": 3024
         }
       ],
-      "place_id": "some place id 12",
+      "place_id": "12",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.2,
@@ -536,10 +536,10 @@
           "width": 1136
         }
       ],
-      "place_id": "some place id 13",
+      "place_id": "13",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.5,
@@ -580,10 +580,10 @@
           "width": 6000
         }
       ],
-      "place_id": "some place id 14",
+      "place_id": "14",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.1,
@@ -624,10 +624,10 @@
           "width": 480
         }
       ],
-      "place_id": "some place id 15",
+      "place_id": "15",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.4,
@@ -668,10 +668,10 @@
           "width": 1024
         }
       ],
-      "place_id": "some place id 16",
+      "place_id": "16",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "rating": 4.9,
       "reference": "",
@@ -719,10 +719,10 @@
           "width": 2038
         }
       ],
-      "place_id": "some place id 17",
+      "place_id": "17",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.1,
@@ -769,10 +769,10 @@
           "width": 640
         }
       ],
-      "place_id": "some place id 18",
+      "place_id": "18",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.7,
@@ -813,10 +813,10 @@
           "width": 2658
         }
       ],
-      "place_id": "some place id 19",
+      "place_id": "19",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 3.9,
@@ -857,10 +857,10 @@
           "width": 851
         }
       ],
-      "place_id": "some place id 20",
+      "place_id": "20",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.6,

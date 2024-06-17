@@ -1,5 +1,4 @@
 import React from "react";
-import { Avatar, Button, Card, Text } from "react-native-paper";
 import RestaurantCard from "./RestaurantCard";
 
 const RestorauntInfoCard = ({ restaurant = {} }) => {
@@ -12,6 +11,7 @@ const RestorauntInfoCard = ({ restaurant = {} }) => {
     rating = 4,
     vicinity,
     isClosedTemporarily = false,
+    placeId,
   } = restaurant;
   return (
     <RestaurantCard
@@ -21,6 +21,7 @@ const RestorauntInfoCard = ({ restaurant = {} }) => {
       adress={vicinity}
       rating={rating}
       isOpenNow={isOpenNow}
+      id={placeId}
     />
   );
 };

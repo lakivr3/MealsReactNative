@@ -1,4 +1,10 @@
-import { View, Text, StatusBar, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StatusBar,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useContext, useState } from "react";
 import Search from "../../../Search";
@@ -6,6 +12,7 @@ import RestorauntInfoCard from "./restoraunt-info-component";
 import { RestaurantsContext } from "@/services/restaurants/context";
 import { ActivityIndicator, MD2Colors } from "react-native-paper";
 import { LocationContext } from "@/services/restaurants/mock/location/context";
+import Details from "@/app/restaurants/[id]";
 
 export default function RestorauntScreen() {
   const { keyword } = useContext(LocationContext);
