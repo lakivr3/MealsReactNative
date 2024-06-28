@@ -2,29 +2,28 @@ import { Image, ScrollView, View } from "react-native";
 import { Avatar, Button, Card, Text } from "react-native-paper";
 import { SvgXml } from "react-native-svg";
 import { router } from "expo-router";
-import star from "../../../../assets/star";
-import open from "../../../../assets/open";
+import star from "../../assets/star";
+import open from "../../assets/open";
 
 import React from "react";
 import { Link } from "expo-router";
+import Favorite from "../favorites/Favorite";
 
-export default function DetailsCard({
-  name,
-  photos,
-  adress,
-  rating,
-  isOpenNow,
-  id,
-}) {
+export default function DetailsCard({ restaurant }) {
+  const {
+    name,
+    photos,
+    vicinity: adress,
+    rating,
+    isOpenNow,
+    placeId: id,
+  } = restaurant;
+  //name, photos, vicinity, rating, isOpenNow, placeId
   const rattingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <>
-      <Card className="bg-white   ">
-        <Card.Content>
-          <Text variant="titleLarge" className="mb-4 font-lato  ">
-            {name}
-          </Text>
-        </Card.Content>
+      <Card className="bg-white pt-4  ">
+        <Favorite restaurant={restaurant} />
         <Card.Cover
           key={name}
           className="bg-white px-4"

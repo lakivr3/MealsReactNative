@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams } from "expo-router";
 import { RestaurantsContext } from "@/services/restaurants/context";
-import DetailsCard from "@/components/features/restorants/components/Details";
+import DetailsCard from "@/components/restourants/Details";
 import { List } from "react-native-paper";
 import { ScrollView } from "react-native";
 
@@ -15,20 +15,11 @@ const Details = () => {
   const [dinnerExpanded, setDinnerExpanded] = useState(false);
   const [drinksExpanded, setDrinksExpanded] = useState(false);
 
-  const { name, photos, vicinity, rating, isOpenNow, placeId } =
-    restaurants.find((e) => e.placeId === id);
+  const restaurant = restaurants.find((e) => e.placeId === id);
   return (
     <SafeAreaView>
       <ScrollView>
-        <DetailsCard
-          key={name}
-          name={name}
-          photos={photos}
-          adress={vicinity}
-          rating={rating}
-          isOpenNow={isOpenNow}
-          id={placeId}
-        />
+        <DetailsCard restaurant={restaurant} />
         <List.Accordion
           title="Breakfast"
           left={(props) => <List.Icon {...props} icon="bread-slice" />}

@@ -2,7 +2,7 @@ import { LocationContext } from "@/services/restaurants/mock/location/context";
 import React, { useEffect, useState, useContext } from "react";
 import { Searchbar } from "react-native-paper";
 
-const Search = ({ placeholder, value }) => {
+const Search = ({ isFavoritesToggle, onFavoritesToggle }) => {
   const { keyword, search } = useContext(LocationContext);
   const [searchKeyword, setSearchKeyword] = useState(keyword);
 
@@ -12,6 +12,8 @@ const Search = ({ placeholder, value }) => {
 
   return (
     <Searchbar
+      icon={isFavoritesToggle ? "heart" : "heart-outline"}
+      onIconPress={onFavoritesToggle}
       placeholder="Search for a location"
       value={searchKeyword}
       onSubmitEditing={() => {

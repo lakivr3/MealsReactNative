@@ -3,7 +3,6 @@ import MapView, { MapMarker, Callout } from "react-native-maps";
 import React, { useContext, useEffect, useState } from "react";
 import { LocationContext } from "@/services/restaurants/mock/location/context";
 import { RestaurantsContext } from "@/services/restaurants/context";
-import RestaurantCard from "@/components/features/restorants/components/RestaurantCard";
 import MapSearch from "@/components/map/MapSearch";
 import MapCallout from "@/components/map/MapCallout";
 import { useRouter } from "expo-router";

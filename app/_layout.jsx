@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { initializeApp } from "firebase/app";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 
 import { Slot, SplashScreen, Stack, Tabs } from "expo-router";
 import {
@@ -10,14 +12,16 @@ import {
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import RestayrantsContextProvider from "@/services/restaurants/context";
 import { LocationContextProvider } from "@/services/restaurants/mock/location/context";
-import Navigation from "@/components/Navigation";
+import { FavoritesContextProvider } from "@/services/favorites/context";
+import { AuthContext, AuthContextProvider } from "@/services/auth/context";
 
 SplashScreen.preventAutoHideAsync();
+
 const RootLayout = () => {
-  let [oswaldLoaded] = useOswald({
+  const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });
-  let [latoLoaded] = useLato({
+  const [latoLoaded] = useLato({
     Lato_400Regular,
   });
 
@@ -25,19 +29,33 @@ const RootLayout = () => {
     if (oswaldLoaded && latoLoaded) SplashScreen.hideAsync();
   }, [oswaldLoaded, latoLoaded]);
   if (!oswaldLoaded || !latoLoaded) return null;
+
   return (
     <>
-      <LocationContextProvider>
-        <RestayrantsContextProvider>
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen
-              name="/restaurants/[id]"
-              options={{ headerShown: false }}
-            />
-          </Stack>
-        </RestayrantsContextProvider>
-      </LocationContextProvider>
+      <AuthContextProvider>
+        <FavoritesContextProvider>
+          <LocationContextProvider>
+            <RestayrantsContextProvider>
+              <Stack>
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                <Stack.Screen
+                  name="restaurants/[id]"
+                  options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                  name="(favorites)"
+                  options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                  name="(camera)"
+                  options={{ headerShown: false }}
+                />
+              </Stack>
+            </RestayrantsContextProvider>
+          </LocationContextProvider>
+        </FavoritesContextProvider>
+      </AuthContextProvider>
     </>
   );
 };
