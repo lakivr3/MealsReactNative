@@ -1,19 +1,45 @@
 import { View, Text, Button, TouchableOpacity } from "react-native";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useFocusEffect } from "expo-router";
 import { Avatar, List } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { AuthContext } from "@/services/auth/context";
 import { useRouter } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Setting = () => {
   const { onLogout, user } = useContext(AuthContext);
+  const [photo, setPhoto] = useState(null);
   const route = useRouter();
+
+  const getProfilePicture = async (currentUser) => {
+    const photoUri = await AsyncStorage.getItem(`${currentUser.uid}-photo`);
+    setPhoto(photoUri);
+  };
+
+  useFocusEffect(() => {
+    getProfilePicture(user);
+  });
+
   return (
     <SafeAreaView>
       <List.Section>
         <View className="items-center mb-10">
           <TouchableOpacity onPress={() => route.push("/camera")}>
-            <Avatar.Icon size={150} icon="human" className="bg-sky-500 mb-2" />
+            {!photo && (
+              <Avatar.Icon
+                size={150}
+                icon="human"
+                className="bg-sky-500 mb-2"
+              />
+            )}
+            {photo && (
+              <Avatar.Image
+                size={150}
+                source={{ uri: photo }}
+                className="bg-sky-500 mb-2"
+              />
+            )}
           </TouchableOpacity>
           <Text className="font-oswald">{user?.email}</Text>
         </View>
